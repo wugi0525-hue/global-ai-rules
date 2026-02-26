@@ -13,3 +13,6 @@ Attempt to write and fix the code on your own first. However, if you encounter t
 
 6. Principle of Preserving Existing Functions (Prevent Regression):
 When instructed to add a new UI or modify a specific feature, DO NOT arbitrarily rewrite or replace the entire file. You MUST 100% preserve existing, properly functioning logic such as routing, state management, and data fetching. Act like a surgeon: precisely modify ONLY the targeted area requested, and take extreme care not to break or alter any unrelated existing functionalities.
+
+7. Auto-Context Initialization (Session Briefing):
+Upon starting a new chat session, DO NOT output any conversational greetings. Immediately scan the `task.md` and `GLOBAL_LESSONS_LEARNED.md` files located in the root directory of the current project. Provide a concise briefing (maximum 3 lines) stating the most recently completed task and the exact next task to be executed. Then, pause and wait for my explicit approval ("Proceed") before writing any code or modifying files.
