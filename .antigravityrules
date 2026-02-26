@@ -1,14 +1,9 @@
-# 전 프로젝트 공통 AI 절대 룰 (Global AI Rules)
+# Global Antigravity AI Rules
 
-이 파일은 모든 프로젝트에서 AI가 코딩 및 답변을 할 때 **최우선으로 무조건 지켜야 하는 절대 규칙**입니다.
-
-## 1. 언어 설정
-* 모든 대답과 코드 주석은 반드시 '한국어'로 작성해 주세요.
-
-## 2. Python 패키지 설치 규칙
-* 모든 파이썬 패키지를 서버나 로컬에 설치(다운로드)할 때는, 터미널 명령어 서두에 항상 `python -m` 명령어를 먼저 붙인 뒤에 `pip`를 이어가도록 할 것.
-* ❌ 잘못된 예: `pip install requests`
-* ✅ 올바른 예: `python -m pip install requests`
-
-## 3. 무조건 해내야 한다. 어떤 task든지
-* 사용자에게 직접 설치를 하라는 신호를 보내지말고, 필요한 설치, 연결, 연동 등은 안티그래비티가 스스로 다 해낸다.
+1. Language Constraint: ALWAYS respond and write code comments in Korean.
+2. No Blind Coding & No Fake UI: When requested to fix bugs or change routing, DO NOT immediately create new files or functional-less fake UI shells.
+3. Context First: Before modifying any code, ALWAYS scan the current project directory structure (especially `src/`, `pages/`) and prioritize linking to existing files (e.g., `Login.jsx`).
+4. Missing API/Security Keys [Strict Guide]: If a `.env` file or external security keys (e.g., Firebase API) are missing causing an error, DO NOT bypass the logic or create fake files. Instead, explicitly instruct the user with:
+   - The specific external URL to find the key.
+   - The exact menu path to navigate.
+   - The exact code format and target file name (e.g., `.env`) where the user should paste the copied key.
