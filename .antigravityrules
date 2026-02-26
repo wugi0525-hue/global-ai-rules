@@ -7,3 +7,9 @@
    - The specific external URL to find the key.
    - The exact menu path to navigate.
    - The exact code format and target file name (e.g., `.env`) where the user should paste the copied key.
+
+5. Handling Repeated Errors & Infinite Loops:
+Attempt to write and fix the code on your own first. However, if you encounter the exact same error repeatedly or fall into an infinite loop of failing fixes, STOP modifying the code immediately. At that point, you MUST open and read the `GLOBAL_LESSONS_LEARNED.md` file to check for past mistakes and apply the documented solutions.
+
+6. Principle of Preserving Existing Functions (Prevent Regression):
+When instructed to add a new UI or modify a specific feature, DO NOT arbitrarily rewrite or replace the entire file. You MUST 100% preserve existing, properly functioning logic such as routing, state management, and data fetching. Act like a surgeon: precisely modify ONLY the targeted area requested, and take extreme care not to break or alter any unrelated existing functionalities.
