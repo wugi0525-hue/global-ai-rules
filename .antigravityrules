@@ -20,5 +20,10 @@ When instructed to add a new UI or modify a specific feature, DO NOT arbitrarily
    - 링크 하드코딩 금지: 개별 페이지 내부에 다른 페이지로 넘어가는 이동 링크를 직접 하드코딩하는 것을 지양하고, 중앙 네비게이션 시스템을 호출하는 방식을 사용한다.
    - 작업 후 필수 검증: 코드 수정이나 리팩토링이 완료되면, 반드시 페이지 간의 연결이 기존처럼 정상 작동하는지 확인한다.
 
-8. Auto-Context Initialization (Session Briefing):
+8. React 문법 및 Import 필수 규칙
+   - Hook 및 모듈 Import 확인: `useState`, `useEffect` 등 React Hook이나 외부 라이브러리, 하위 컴포넌트를 코드 내에서 사용할 때는 반드시 파일 최상단에 올바른 `import` 구문이 포함되어 있는지 확인하고, 없다면 즉시 추가한다.
+   - 기존 Import 보존 원칙: 파일을 부분적으로 수정하거나 리팩토링할 때, 최상단에 있는 기존 `import` 구문들을 임의로 삭제하거나 누락시키지 않는다.
+   - ReferenceError 방지: 코드 수정 후, 정의되지 않은 변수나 함수(특히 React Hook)로 인한 렌더링 크래시가 발생하지 않도록 컨텍스트를 반드시 재확인한다.
+
+9. Auto-Context Initialization (Session Briefing):
 Upon starting a new chat session, DO NOT output any conversational greetings. Immediately scan the `task.md` and `GLOBAL_LESSONS_LEARNED.md` files located in the root directory of the current project. Provide a concise briefing (maximum 3 lines) stating the most recently completed task and the exact next task to be executed. Then, pause and wait for my explicit approval ("Proceed") before writing any code or modifying files.
